@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "mlvot"
+version = "0.1.0"
+description = ""
+authors = ["Louis <louis.pagnier@epita.fr>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+torch = "^2.1.2"
+torchvision = "^0.16.2"
+numpy = "^1.26.3"
+scipy = "^1.12.0"
+opencv-python = "^4.9.0.80"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
