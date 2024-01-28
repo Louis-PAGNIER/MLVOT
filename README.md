@@ -19,7 +19,7 @@ Les étapes sont les suivantes:
 * **TP4**: Application du filtre de Kalman développé dans le TP1 à notre algorithme actuelle.
 * **TP5**: Ajout d'un modèle de deep learning capable d'extraire des vecteurs de features et mesure de nos algorithmes à l'aide du script TrackEval.
 
-<span style="color: red">Les 5 TPs se trouvent dans le dossier **src/**</span>.
+**/!\\** Les 5 TPs se trouvent dans le dossier **src/**.
 Le premier TP est dans son dossier à part, tandis que les TP2-5 sont directement à la racine du dossier `src/`.
 
 ### Architecture du projet
@@ -153,6 +153,10 @@ def update_tracks(tracks, detections_dict, i_frame, sigma_iou, counter):
 ```
 
 
+https://github.com/Louis-PAGNIER/MLVOT/assets/55755544/69c56cd0-933f-4a65-b9c5-232407795397
+
+
+
 ## TP4
 
 Le filtre de Kalman permet d'améliorer la précision de l'alogrithme car il va essayer de déterminer la prochaine position d'une détection en fonction de ses positions précédentes. Ainsi, on peut s'en servir pour calculer l'IoU entre cette prédiction et les détections de la frame suivante.
@@ -221,6 +225,10 @@ for track in tracks:
 ```
 
 
+
+https://github.com/Louis-PAGNIER/MLVOT/assets/55755544/55b70c40-6cc0-4dac-8c18-7d014799d4fe
+
+
 ## TP5
 
 Dans ce dernier TP, j'ai ajouter au calcul de similarité du score une similarité cosinus entre les vecteurs de features des détections.
@@ -230,6 +238,10 @@ Pour obtenir les vecteurs de features, j'ai utlisé le modèle *ResNet18* pré-e
 Pour obtenir les vecteurs de features, il faut récupérer l'avant-dernière couche du modèle.
 
 Je fais ensuite une moyenne entre l'IoU et la similarité cosinus pour obtenir le score final qui sera ensuite passé à l'algorithme hongrois.
+
+
+https://github.com/Louis-PAGNIER/MLVOT/assets/55755544/2ab9bf35-78ed-4955-a15c-8f7165a89fd9
+
 
 ## Résultats
 
