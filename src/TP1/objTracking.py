@@ -10,6 +10,8 @@ ret = True
 history = []
 while ret:
     ret, frame = cap.read()
+    if not ret:
+        break
 
     center = detect(frame)[0]
     cv2.circle(frame, (int(center[0]), int(center[1])), 10, (0, 255, 0), 2)

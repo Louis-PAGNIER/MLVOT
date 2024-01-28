@@ -93,7 +93,7 @@ def process_frames(detections_lines: List[str], sigma_iou: float) -> None:
 
     # On traite chaque frame en utilisant la matrice de similarité
     counter = 0
-    for i_frame in range(1, 526):
+    for i_frame in range(1, 525):
         matrix = compute_similarity_matrix(detections_dict, i_frame, i_frame + 1)
         for i in range(len(matrix)):
             max_iou = max(matrix[i])
