@@ -63,6 +63,10 @@ Ce filtre possède une méthode `__init__` qui permet d'initialiser les données
 Il y a également les méthodes `predict` et `update` permettant respectivement de prédire la prochaine position à partir des positions précédentes, et la seconde de mettre à jour la position actuelle à partir d'une vérité terrain.
 
 
+
+https://github.com/Louis-PAGNIER/MLVOT/assets/55755544/eb7825f5-578b-4001-9d86-e2e81c9acc7a
+
+
 ## TP2
 
 Pour ce TP ainsi que les TP suivants, le jeu de données utilisé est: *MOT15 ADL-Rundle-6*.
@@ -109,6 +113,10 @@ def process_frames(detections_lines, sigma_iou):
 
 ```
 Avec pour chaque détection `dict[5] = id`.
+
+
+https://github.com/Louis-PAGNIER/MLVOT/assets/55755544/ff6baf03-a810-4165-8f63-1fc58f3884cd
+
 
 ## TP3
 
