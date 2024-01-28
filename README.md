@@ -9,7 +9,7 @@ Ceci est le rapport Markdown, il inclut les vidéos des résultats de mon algori
 
 ## Introduction
 
-Ce projet vise à implémenter un tracker multi-cibles (dans notre cas de personnes). Le projet est découpé en 5 TPs impliquants une amélioration continue du projet à chaque étape.
+Ce projet vise à implémenter un tracker multi-cibles (dans notre cas de personnes). Le projet est découpé en 5 TPs impliquant une amélioration continue du projet à chaque étape.
 
 Les étapes sont les suivantes:
 
@@ -72,7 +72,7 @@ Pour ce TP ainsi que les TP suivants, le jeu de données utilisé est: *MOT15 AD
 L'algorithme de mon programme est découpé en plusieurs étapes:
 
 1. Création d'un dictionnaire comprenant toutes les détections groupées par n° de frame. (1ère partie de `process_frames`.
-2. Ensuite, pour chaque frame, je calcul la matrice de similarité entre cette frame et celle d'après: `compute_similarity_matrix(detections_dict, i_frame, i_frame + 1)`.
+2. Ensuite, pour chaque frame, je calcule la matrice de similarité entre cette frame et celle d'après: `compute_similarity_matrix(detections_dict, i_frame, i_frame + 1)`.
 3. Pour chaque détection, je prend celle *dans la frame suivante* qui est le plus similaire, et je lui assigne l'identifiant de celle qui lui correspond le plus *dans la frame actuelle*.
 
 ### Algorithme Principale
@@ -118,7 +118,7 @@ https://github.com/Louis-PAGNIER/MLVOT/assets/55755544/ff6baf03-a810-4165-8f63-1
 
 ## TP3
 
-Ce TP reprend le principe du TP précédent mais ajoute l'*algorithme hongarien* afin d'attribuer à chaque track une *unique* détection en trouvant la combinaison maximisant le score total.
+Ce TP reprend le principe du TP précédent mais ajoute l'*algorithme hongrois* afin d'attribuer à chaque track une *unique* détection en trouvant la combinaison maximisant le score total.
 
 Pour utiliser cet algorithme, j'ai utilisé comme indiqué dans le PDF la fonction `linear_sum_assignment` du module `scipy.optimize`.
 
@@ -165,9 +165,9 @@ https://github.com/Louis-PAGNIER/MLVOT/assets/55755544/69c56cd0-933f-4a65-b9c5-2
 
 ## TP4
 
-Le filtre de Kalman permet d'améliorer la précision de l'alogrithme car il va essayer de déterminer la prochaine position d'une détection en fonction de ses positions précédentes. Ainsi, on peut s'en servir pour calculer l'IoU entre cette prédiction et les détections de la frame suivante.
+Le filtre de Kalman permet d'améliorer la précision de l'algorithme, car il va essayer de déterminer la prochaine position d'une détection en fonction de ses positions précédentes. Ainsi, on peut s'en servir pour calculer l'IoU entre cette prédiction et les détections de la frame suivante.
 
-L'implémentation du filtre de Kalman au programme m'a fait revoir une grande partie du code. En effet, maintenant mes listes ne contiennent plus des listes de nombres mais des objet `Track` enveloppant un filtre `KalmanFilter`.
+L'implémentation du filtre de Kalman au programme m'a fait revoir une grande partie du code. En effet, maintenant mes listes ne contiennent plus des listes de nombres, mais des objets `Track` enveloppant un filtre `KalmanFilter`.
 
 ```py
 class Track:
@@ -210,7 +210,7 @@ class Track:
         return Track(x, y, self.width, self.height, self.conf_d, self.track_id)
 ```
 
-Pour ce TP, les trois grandes étapes de l'algorithmes sont les suivantes:
+Pour ce TP, les trois grandes étapes de l'algorithme sont les suivantes:
 
 ```py
 # On prédit la position des tracks
@@ -237,9 +237,9 @@ https://github.com/Louis-PAGNIER/MLVOT/assets/55755544/55b70c40-6cc0-4dac-8c18-7
 
 ## TP5
 
-Dans ce dernier TP, j'ai ajouter au calcul de similarité du score une similarité cosinus entre les vecteurs de features des détections.
+Dans ce dernier TP, j'ai ajouté au calcul de similarité du score une similarité cosinus entre les vecteurs de features des détections.
 
-Pour obtenir les vecteurs de features, j'ai utlisé le modèle *ResNet18* pré-entraîné sur *ImageNet*.
+Pour obtenir les vecteurs de features, j'ai utilisé le modèle *ResNet18* pré-entraîné sur *ImageNet*.
 
 Pour obtenir les vecteurs de features, il faut récupérer l'avant-dernière couche du modèle.
 
