@@ -58,9 +58,7 @@ Le premier TP est dans son dossier à part, tandis que les TP2-5 sont directemen
 
 Dans ce TP, j'ai implémenté la classe `KalmanFilter` avec les formules données dans le PDF.
 
-Ce filtre possède une méthode `__init__` qui permet d'initialiser les données internes du filtre nécéssaires aux calculs.
-
-Il y a également les méthodes `predict` et `update` permettant respectivement de prédire la prochaine position à partir des positions précédentes, et la seconde de mettre à jour la position actuelle à partir d'une vérité terrain.
+Ce filtre possède les méthodes `predict` et `update` permettant respectivement de prédire la prochaine position à partir des positions précédentes, et la seconde de mettre à jour la position actuelle à partir d'une vérité terrain.
 
 
 
