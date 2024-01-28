@@ -1,6 +1,6 @@
 import cv2
 import numpy as np
-from TP2.tp2 import compute_iou
+from tp2 import compute_iou
 from tp3 import hungarian_algorithm
 from KalmanFilter import KalmanFilter
 from typing import List, Tuple, Dict

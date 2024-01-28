@@ -3,7 +3,7 @@ from functools import cache
 import cv2
 import numpy as np
 
-from TP2.tp2 import compute_iou
+from tp2 import compute_iou
 from tp3 import hungarian_algorithm
 from tp4 import Track, init_detections, draw_bounding_boxes
 
